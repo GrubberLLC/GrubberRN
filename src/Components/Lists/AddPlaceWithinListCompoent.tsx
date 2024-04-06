@@ -28,13 +28,13 @@ const AddPlaceWithinListCompoent = (props) => {
     const query = {
       term: searchTerm,
       location: searchLocation,
-      categories: 'type%3A%20restaurant',
+      categories: 'restaurant',
     };
   
     try {
       const response = await axios.get(yelpUrl, {
         headers: {
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${YELP_API_KEY}`,
         },
         params: query,
       });
@@ -42,7 +42,7 @@ const AddPlaceWithinListCompoent = (props) => {
       setLoading(false)
       return response.data;
     } catch (error) {
-      console.error('Error fetching data from Yelp:', error);
+      console.error('Error fetching data from Yelp:', JSON.stringify(error));
     }
   };
 
@@ -55,7 +55,7 @@ const AddPlaceWithinListCompoent = (props) => {
           : addToPlaces(place)
       })
       .catch(error => {
-        console.error('Error fetching profile:', error);
+        console.error('Error fetching profile:', JSON.stringify(error));
         throw error;
       });
   }

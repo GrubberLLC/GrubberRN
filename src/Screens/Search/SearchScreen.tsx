@@ -60,7 +60,7 @@ const SearchScreen  = () => {
     try {
       const response = await axios.get(yelpUrl, {
         headers: {
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${YELP_API_KEY}`,
         },
         params: query,
       });

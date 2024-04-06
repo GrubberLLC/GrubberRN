@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@aws-amplify/core": "^6.0.27",
+    "@aws-amplify/react-native": "^1.0.28",
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/netinfo": "^11.3.1",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.3.29",
+    "aws-amplify": "^6.0.27",
     "axios": "^1.6.8",
     "dotenv": "^16.4.5",
     "react": "18.2.0",

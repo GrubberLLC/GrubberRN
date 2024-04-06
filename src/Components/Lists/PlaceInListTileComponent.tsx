@@ -52,8 +52,6 @@ const PlaceInListTileComponent = (props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    backgroundColor: '#4d4d4d',
-    borderRadius: 16,
     overflow: 'hidden',
     marginBottom: 12
   },
@@ -71,7 +69,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,.4)'
   },
   info: {
-    padding: 16
+    paddingHorizontal: 16,
+    paddingTop: 8
   },
   infoTopBar: {
     width: '100%',
@@ -93,7 +92,6 @@ const styles = StyleSheet.create({
   },
   activity: {
     fontSize: 18,
-    fontWeight: '600',
     color: 'white'
   },
   detailsRowLeft: {

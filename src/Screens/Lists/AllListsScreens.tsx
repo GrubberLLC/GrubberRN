@@ -130,6 +130,8 @@ const styles = StyleSheet.create({
   },
   scrollItem: {
     padding: 8,
+    borderBottomColor: 'grey',
+    borderBottomWidth: 2
   },
   noLocationContainer: {
     flex: 1,

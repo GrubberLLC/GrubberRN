@@ -27,7 +27,7 @@ const ListPlaceTileComponent = (props) => {
     return str.length > maxLength ? str.substring(0, maxLength) + '...' : str;
   }
 
-  function limitDescriptionStringSize(str: string, maxLength = 22) {
+  function limitDescriptionStringSize(str: string, maxLength = 30) {
     return str.length > maxLength ? str.substring(0, maxLength) + '...' : str;
   }
 
@@ -41,7 +41,7 @@ const ListPlaceTileComponent = (props) => {
         </View>
         <View style={styles.infoBottomBar}>
           <Text style={styles.activity}>{limitDescriptionStringSize(item.last_activity)}</Text>
-          <Text style={styles.item}>{convertDateToDaysOrHours(item.created_at)}</Text>
+          {/* <Text style={styles.item}>{convertDateToDaysOrHours(item.created_at)}</Text> */}
         </View>
       </View>
     </TouchableOpacity>
@@ -51,10 +51,9 @@ const ListPlaceTileComponent = (props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    backgroundColor: '#4d4d4d',
-    borderRadius: 8,
+    // backgroundColor: '#4d4d4d',
     overflow: 'hidden',
-    marginBottom: 12
+    marginVertical: 6,
   },
   listImage: {
     width: imageWidth,
@@ -62,7 +61,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgrey'
   },
   info: {
-    padding: 16
+    paddingHorizontal: 8,
+    paddingTop: 8
+    // padding: 16
   },
   infoTopBar: {
     width: '100%',
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   name: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: 'white'
   },
@@ -92,7 +93,6 @@ const styles = StyleSheet.create({
   activity: {
     flex: 1,
     fontSize: 18,
-    fontWeight: '600',
     color: 'white',
     overflow: 'hidden'
   }

@@ -101,7 +101,7 @@ const SingleListScreen = ({route}) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={{backgroundColor: '#2c2c2c', flex: 1, paddingVertical: 16, paddingHorizontal: 8}}>
+      <View style={{backgroundColor: '#2c2c2c', flex: 1}}>
         {/* <View style={styles.mainImageContainer}>
           <View style={styles.imageContainer}>
             <Image source={{uri: list.picture}}  style={styles.mainIMage}/>
@@ -118,7 +118,7 @@ const SingleListScreen = ({route}) => {
                   {
                     listPlaces.map((place) => {
                       return(
-                        <View style={{marginBottom: 16}}>
+                        <View style={{marginVertical: 8,  paddingHorizontal: 8, borderBottomColor: 'grey', borderBottomWidth: 2}}>
                           <PlaceInListTileComponent item={place}/>
                         </View>
                       )

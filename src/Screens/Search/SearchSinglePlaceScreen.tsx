@@ -51,7 +51,7 @@ const SearchSinglePlaceScreen = ({route}) => {
       method: 'GET',
       headers: { 
         'accept': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${YELP_API_KEY}`,
       },
       url: `https://api.yelp.com/v3/businesses/${place_id}`
     };

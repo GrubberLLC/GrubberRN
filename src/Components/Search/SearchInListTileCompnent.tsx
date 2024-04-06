@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     backgroundColor: '#2c2c2c',
-    borderRadius: 16,
     overflow: 'hidden',
-    marginVertical: 18
+    marginVertical: 18,
+    borderBottomColor: 'grey'
   },
   listImage: {
     width: imageWidth,
